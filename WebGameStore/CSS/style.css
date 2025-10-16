@@ -78,6 +78,8 @@ nav {
   justify-content: space-between;
   padding: 12px 32px;
   background: #fff;
+  position: relative;
+  left: 144px;
 }
 
 .featured-bar span {
@@ -95,6 +97,9 @@ nav {
   padding: 6px 18px;
   font-size: 1em;
   cursor: pointer;
+  position: relative;
+  right: 400px;
+  size: 75px 26px;
 }
 
 .banner {
@@ -114,13 +119,14 @@ nav {
   margin-bottom: 18px;
 }
 
-.tag {
+.banner .tag {
   display: inline-block;
   border-radius: 8px;
   font-size: 0.95em;
-  background: #222;
-  color: #fff;
+  background: white;
+  color: black;
   opacity: 0.85;
+  background-size: 47px 15px;
 }
 .tag.sale {
   opacity: 1;
@@ -135,6 +141,9 @@ nav {
 .tag.featured {
   background: #f7c948;
   color: #222;
+  padding: 3px 5px 2px 7px;
+  font-size: 10.4px;
+  text-align: top;
 }
 
 .banner h1 {
@@ -193,18 +202,7 @@ nav {
   margin-right: 8px;
 }
 
-.old-price {
-  color: #fff8;
-  font-size: 1em;
-  margin-right: 4px;
-}
 
-.new-price {
-  color: #fff;
-  font-size: 1.3em;
-  font-weight: bold;
-  margin-right: 8px;
-}
 
 .add-cart {
   background: #b71c2b;
@@ -218,20 +216,55 @@ nav {
 
 .game-list {
   display: flex;
-  gap: 24px;
+  gap: 5px;
   margin: 32px 0;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  position: relative;
+  right: 143px;
+  left: 70px;
 }
 
-.game-card {
+.game-list .game-card {
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  width: 300px;
+  size: 257px 230px;
   display: flex;
   flex-direction: column;
+  position: relative;
+  left: 0px;
+}
+
+.game-card .discount-badge {
+  position: absolute;
+  background: #d4183d;
+  color: white;
+  padding: 4px 8px;
+  font-size: 0.85em;
+  border-radius: 0 8px 8px 0;
+  top: 12px;
+  left: 0;
+  right: 201px;
+  font-weight: bold;
+}
+
+.game-card .price-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.game-card .old-price {
+  color: #888;
+  text-decoration: line-through;
+  font-size: 0.9em;
+}
+
+.game-card .new-price {
+  background: linear-gradient(90deg, #d4183d 0%, #b71c2b 100%);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-weight: bold;
 }
 
 .game-card img {
