@@ -1,346 +1,370 @@
+/* Navigation Bar Styles */
+
+body {
+  font-family: "Montserrat";
+}
+
 nav {
-  display: flex;
+  position: sticky;
+  top: 0px;
   align-items: center;
-  justify-content: space-between;
-  background: #fff;
-  padding: 12px 32px;
-  width: 100vw;
-  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  height: 43px;
+  display: flex;
+  padding: 10px 10px;
+  background-color: white;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
 }
 
 .nav-left {
+  position: relative;
+  top: -1px;
+  margin-left: 104px;
+}
+
+.nav-right {
+  position: relative;
+  top: 4px;
   display: flex;
-  align-items: center;
-  gap: 8px;
+  gap: 19px;
+  height: 21px;
 }
 
 .site-name {
-  font-size: 1.5em;
+  position: absolute;
+  top: 2px;
+  font-size: 18px;
   font-weight: bold;
-  margin-left: 8px;
+  margin-left: 5px;
 }
 
 .nav-center {
+  position: relative;
+  top: -1px;
+  left: -2px;
   display: flex;
-  align-items: center;
-  gap: 24px;
-  flex: 1;
-  margin-left: 100px;
+  width: 708px;
+  height: 30px;
+  gap: 150px;
+  margin-left: 250px;
+  margin-right: 168px;
 }
 
-.nav-center a {
-  text-decoration: none;
-  color: #444;
-  font-size: 1em;
-  margin-right: 8px;
+.indicators {
+  padding-top: 4px;
+  display: flex;
+  gap: 15px;
+  width: 300px;
+  font-size: 15px;
 }
 
 .search-box {
   display: flex;
   align-items: center;
-  background: #f5f5f7;
-  border-radius: 8px;
-  padding: 0 12px;
-  margin-left: auto;
-  margin-right: 50px;
+  margin-left: -105px;
+  width: 360px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: #f3f3f5;
 }
 
-.search-icon {
-  width: 16px;
-  height: 16px;
-  margin-right: 8px;
+.search-box img {
+  width: 13px;
+  height: 13px;
+  margin-right: 9px;
+  margin-left: 8px;
 }
 
 .search-box input {
-  border: none;
-  background: transparent;
   outline: none;
-  padding: 8px 0;
-  font-size: 1em;
-  width: 500px;
+  border: none;
+  font-size: 10px;
+  width: 100%;
+  background-color: transparent;
 }
 
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  margin-right: 200px;
-}
-
-.nav-center a.active {
-  font-weight: bold;
-  color: #222;
-}
-
-.featured-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 32px;
-  background: #fff;
-  position: relative;
-  left: 144px;
-}
-
-.featured-bar span {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 500;
-  font-size: 1.1em;
-}
-
-.view-all {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 6px 18px;
-  font-size: 1em;
-  cursor: pointer;
-  position: relative;
-  right: 400px;
-  size: 75px 26px;
-}
+/* Banner Styles  */
 
 .banner {
-  position: relative;
-  background: url("../Asset/Image/banner.jpg") no-repeat center center/cover;
-  color: #fff;
-  padding: 30px 836px 54px 143px;
-  margin-bottom: 24px;
-  font-family: "Montserrat", sans-serif;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-top: 2px;
+  height: 374px;
+  background-image: url(../Asset/Image/banner.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding-top: 27px;
+  padding-left: 150px;
 }
 
 .banner-tags {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 18px;
+  position: relative;
+  height: auto;
 }
 
-.banner .tag {
-  display: inline-block;
-  border-radius: 8px;
-  font-size: 0.95em;
-  background: white;
-  color: black;
-  opacity: 0.85;
-  background-size: 47px 15px;
-}
-.tag.sale {
-  opacity: 1;
-  background: #d4183d;
-  background-size: 51px 15px;
-  padding: 4px 8px 2px 8px;
-  text-align: bottom;
-  font-family: "Montserrat", sans-serif;
-  font-size: 10.4px;
-  font-weight: 500;
-}
-.tag.featured {
-  background: #f7c948;
-  color: #222;
-  padding: 3px 5px 2px 7px;
-  font-size: 10.4px;
-  text-align: top;
+.tag-sale {
+  background-color: #d4183d;
+  color: white;
+  border-radius: 6px;
+  font-size: 9px;
+  padding: 2px 9px;
+  width: auto;
+  height: 12px;
+  display: inline-flex;
 }
 
-.banner h1 {
-  font-size: 3em;
-  font-weight: bold;
-  margin: 0 0 16px 0;
-  line-height: 1.1;
+.tag-featured {
+  background-color: #fdc700;
+  border-radius: 6px;
+  font-size: 10px;
+  padding: 2px 9px;
+  width: auto;
+  height: 11px;
+  display: inline-flex;
 }
 
-.banner p {
-  font-size: 1.15em;
-  max-width: 600px;
-  margin-bottom: 24px;
+.tag {
+  border: black 1px solid;
+  border-radius: 6px;
+  font-size: 10px;
+  padding: 2px 9px;
+  width: auto;
+  height: 11px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
 }
 
 .banner-info {
   display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 24px;
 }
 
-.banner-info .rating {
-  background: #111a;
-  border-radius: 6px;
-  padding: 4px 12px;
-  font-weight: 500;
+.rating {
   display: flex;
   align-items: center;
-  gap: 6px;
+  background-color: black;
+  color: white;
+  border-radius: 6px;
+  width: auto;
+  height: 28px;
+  padding-left: 8px;
+}
+
+.rating b {
+  font-weight: 400;
+  font-style: italic;
 }
 
 .learn-more {
-  background: #111;
-  color: #fff;
-  border: none;
+  display: flex;
+  align-items: center;
+  width: 106px;
+  padding-left: 16px;
+  margin-left: 8px;
+  background-color: black;
+  color: white;
   border-radius: 6px;
-  padding: 8px 20px;
-  font-size: 1em;
-  cursor: pointer;
+  border: none;
+  height: 29px;
 }
 
 .banner-sale {
-  position: absolute;
-  right: 40px;
-  bottom: 40px;
   display: flex;
   align-items: center;
-  gap: 16px;
+  margin-left: 638px;
+  margin-top: -1px;
+  height: 40px;
 }
 
 .discount {
-  color: #c0392b;
-  font-size: 2em;
-  font-weight: bold;
-  margin-right: 8px;
+  border-radius: 6px 0px 0px 6px;
+  background-color: #4b1822;
+  font-size: 41px;
+  color: #ff6565;
+  padding-left: 5px;
+  padding-right: 2px;
 }
 
+.old-new-price {
+  background-color: black;
+  padding-left: 11px;
+  padding-right: 8px;
+}
 
+.old-price {
+  color: #9b9b9b;
+  font-size: 13px;
+  text-decoration: line-through;
+  margin-left: 32px;
+}
+
+.new-price {
+  color: #ff6565;
+  font-size: 23px;
+  margin-bottom: 6px;
+}
 
 .add-cart {
-  background: #b71c2b;
-  color: #fff;
+  display: flex;
+  align-items: center;
+  width: 143px;
+  height: 41px;
+  background-image: linear-gradient(to right, #d4183d, #6e0c20);
+  color: white;
   border: none;
-  border-radius: 8px;
-  padding: 10px 28px;
-  font-size: 1em;
-  cursor: pointer;
+  border-radius: 0px 6px 6px 0px;
+  font-size: 21px;
+  padding-left: 20px;
+  padding-top: 6px;
+}
+
+.styled-section {
+  margin-top: 24px;
+  padding-left: 153px;
+}
+
+.view-all {
+  background-color: white;
+  border: #898989 1px solid;
+  border-radius: 6px;
+  color: black;
+  font-size: 15px;
+  margin-left: 989px;
+  padding: 4px 10px;
 }
 
 .game-list {
   display: flex;
-  gap: 5px;
-  margin: 32px 0;
+  gap: 18px;
+  margin-top: 17px;
+  padding-left: 149px;
+}
+
+.game-card {
   position: relative;
-  right: 143px;
-  left: 70px;
+  border: #898989 1px solid;
+  border-radius: 18px;
+  width: 288px;
+  padding-bottom: 10px;
 }
-
-.game-list .game-card {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  size: 257px 230px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  left: 0px;
-}
-
-.game-card .discount-badge {
-  position: absolute;
-  background: #d4183d;
-  color: white;
-  padding: 4px 8px;
-  font-size: 0.85em;
-  border-radius: 0 8px 8px 0;
-  top: 12px;
-  left: 0;
-  right: 201px;
-  font-weight: bold;
-}
-
-.game-card .price-container {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.game-card .old-price {
-  color: #888;
-  text-decoration: line-through;
-  font-size: 0.9em;
-}
-
-.game-card .new-price {
-  background: linear-gradient(90deg, #d4183d 0%, #b71c2b 100%);
-  color: white;
-  padding: 4px 12px;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
 .game-card img {
   width: 100%;
-  height: 160px;
-  object-fit: cover;
 }
 
 .game-info {
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  padding-left: 12px;
 }
 
 .game-info h3 {
-  margin: 0;
-  font-size: 1.2em;
+  font-size: 21px;
+  margin-top: 5px;
+  margin-bottom: 0px;
 }
-
 .studio {
-  color: #888;
-  font-size: 0.95em;
+  font-size: 14px;
 }
 
 .game-tags {
+  margin-top: 5px;
+  gap: 3px;
   display: flex;
-  gap: 6px;
-  margin: 4px 0;
+  align-items: center;
 }
 
-.tag {
-  background: #eee;
-  color: #222;
+.tags {
+  border: none;
   border-radius: 6px;
-  padding: 2px 8px;
-  font-size: 0.85em;
-}
-
-.tag.featured {
-  background: #f7c948;
-  color: #222;
-  font-weight: bold;
+  font-size: 10px;
+  padding: 2px 9px;
+  width: auto;
+  height: 11px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee;
 }
 
 .game-rating-price {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 8px;
-}
-
-.rating {
-  background: #111a;
-  border-radius: 6px;
-  padding: 2px 8px;
-  font-size: 0.95em;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.price {
-  background: #111;
-  color: #fff;
-  border-radius: 6px;
-  padding: 4px 14px;
-  font-weight: bold;
-  font-size: 1em;
+  margin-top: 20px;
 }
 
 .rating-gameList {
-  border-radius: 6px;
-  padding: 2px 8px;
-  font-size: 0.95em;
-  display: flex;
+  font-size: 15px;
+}
+
+.rating-gameList img {
+  height: 9px;
+  width: 9px;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+
+.price {
+  position: absolute;
+  font-size: 13px;
+  justify-content: center;
   align-items: center;
-  gap: 4px;
+  background-color: black;
+  color: white;
+  padding-top: 5px;
+  padding-left: 8px;
+  padding-right: 7px;
+  padding-bottom: 3px;
+  border-radius: 6px;
+  margin-left: 63px;
+  right: 11px;
+  bottom: 6px;
+}
+
+.price:hover {
+  background-color: white;
+  color: black;
+  transition: all 0.3s ease;
+  border: black 1px solid;
+  cursor: pointer;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 12px;
+  background-color: #d4183d;
+  padding: 2px 10px 2px 10px;
+  border-radius: 0px 6px 6px 0px;
+  color: white;
+  font-size: 20px;
+}
+
+.price-sale {
+  background-image: linear-gradient(to right, #170b0b, #d4183d);
+  color: white;
+  padding-top: 5px;
+  padding-left: 8px;
+  padding-right: 7px;
+  padding-bottom: 5px;
+  border-radius: 6px;
+  margin-right: 10px;
+  font-size: 13px;
+  display: flex;
+  position: absolute;
+  bottom: 6px;
+  right: 4px;
+}
+
+.price-sale:hover {
+  background-image: none;
+  background-color: white;
+  color: #d4183d;
+  transition: all 0.3s ease;
+  border: black 1px solid;
+  cursor: pointer;
+}
+
+.price-sale:hover s {
+  color: black;
 }
