@@ -271,6 +271,11 @@ nav a {
 }
 
 .game-info h3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+
   font-size: 21px;
   margin-top: 5px;
   margin-bottom: 0px;
