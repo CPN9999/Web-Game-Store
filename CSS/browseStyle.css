@@ -1,0 +1,56 @@
+.game-list-browse {
+  display: flex;
+
+  gap: 10px;
+}
+
+.filter {
+  margin-top: 29px;
+  margin-left: 151px;
+  border: #898989 1px solid;
+  border-radius: 11px;
+  width: 279px;
+  height: 470px;
+}
+
+.filter-label {
+  font-size: 12px;
+  margin-left: 19px;
+  margin-top: 15px;
+}
+
+.checklist {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.checklist label {
+  font-size: 11px;
+}
+
+.On-sale-only {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  margin-left: 14px;
+}
+
+.filter button {
+  background-color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 241px;
+  height: 28px;
+  border: #898989 1px solid;
+}
+
+.filter button:hover {
+  color: white;
+  background-image: linear-gradient(to right, #d4183d, #170b0b);
+  transition: 0.3s ease;
+  cursor: pointer;
+}

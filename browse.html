@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/browseStyle.css" />
+    <title>GameForge</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,400;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <img
+          src="Asset/Icon/Logo.png"
+          alt="Logo"
+          style="height: 22px; width: 17px"
+        />
+        <span class="site-name">GameForge</span>
+      </div>
+      <div class="nav-center">
+        <div class="indicators">
+          <a href="index.html">Home</a>
+          <a href="browse.html" class="active">Browse</a>
+          <a href="">Categories</a>
+        </div>
+        <div class="search-box">
+          <img src="Asset/Icon/Search.png" alt="Search" class="search-icon" />
+          <input type="text" placeholder="Search for games..." />
+        </div>
+      </div>
+      <div class="nav-right">
+        <img
+          src="Asset/Icon/Shopping Cart.png"
+          alt="Cart"
+          style="height: 17px"
+        />
+        <img
+          src="Asset/Icon/Profile Picture.png"
+          alt="Profile"
+          style="height: 29px; border-radius: 50%; margin-top: -8px"
+        />
+      </div>
+    </nav>
+
+    <div class="main-content">
+      <div class="filter">
+        <div class="filter-label">
+          <img
+            src="Asset/Icon/Filter.png "
+            style="width: 16px; height: 16px"
+            alt=""
+          />
+          <span>Filters</span>
+        </div>
+        <div style="margin-top: 26px; margin-left: 18px; font-size: 10px">
+          Search
+        </div>
+        <div
+          class="search-box"
+          style="width: 240px; margin-left: 19px; margin-top: 10px"
+        >
+          <img src="Asset/Icon/Search.png" alt="Search" class="search-icon" />
+          <input type="text" placeholder="Search for games..." />
+        </div>
+        <div class="Genres">
+          <div style="font-size: 10px; margin-top: 24px; margin-left: 19px">
+            Genres
+          </div>
+          <div class="checklist">
+            <li style="list-style: none">
+              <input type="checkbox" id="action" name="action" value="Action" />
+              <label for="action"> Action</label><br />
+              <input
+                type="checkbox"
+                id="adventure"
+                name="adventure"
+                value="Adventure"
+              />
+              <label for="Adventure"> Adventure</label><br />
+              <input type="checkbox" id="RPG" name="RPG" value="RPG" />
+              <label for="RPG"> RPG</label><br />
+            </li>
+          </div>
+        </div>
+        <div style="margin-top: 117px; margin-left: 17px; font-size: 12px">
+          Price Range: $0-$100
+        </div>
+        <div class="On-sale-only">
+          <input type="checkbox" id="On-sale-only" name="On-sale-only" />
+          <label for="On-sale-only" style="font-size: 12px"> On Sale Only</label
+          ><br />
+        </div>
+        <button>Clear All Filters</button>
+      </div>
+      <div class="game-list"></div>
+    </div>
+  </body>
+</html>
