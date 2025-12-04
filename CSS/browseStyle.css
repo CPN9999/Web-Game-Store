@@ -1,12 +1,8 @@
-.game-list-browse {
-  display: flex;
-
-  gap: 10px;
-}
-
 .filter {
+  position: fixed;
+  top: 59px;
   margin-top: 29px;
-  margin-left: 151px;
+  margin-left: 74px;
   border: #898989 1px solid;
   border-radius: 11px;
   width: 279px;
@@ -21,13 +17,73 @@
 
 .checklist {
   display: flex;
-  align-items: center;
   margin-top: 10px;
   margin-left: 15px;
+  max-height: 144px;
+  overflow-y: scroll;
+  padding-right: 25px;
+  width: 218px;
 }
 
 .checklist label {
   font-size: 11px;
+  cursor: pointer;
+}
+
+.checklist input[type="checkbox"] {
+  /* Ẩn checkbox mặc định của trình duyệt */
+  appearance: none;
+  -webkit-appearance: none;
+
+  /* Thiết lập kích thước và kiểu dáng cho checkbox tùy chỉnh */
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ccc;
+  border-radius: 4px; /* Bo góc nhẹ */
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  position: relative;
+  top: -1px;
+}
+
+/* Kiểu dáng khi checkbox được chọn (Dấu tích bên trong) */
+.checklist input[type="checkbox"]:checked {
+  background-color: #d4183d; /* Màu nền khi được chọn */
+  border-color: #d4183d;
+}
+
+/* Thêm dấu tích (tùy chọn: sử dụng pseudo-element) */
+.checklist input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checklist::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Thiết lập track (vùng chứa thanh cuộn) */
+.checklist::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Thiết lập thumb (thanh kéo) */
+.checklist::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to right, #6b0c1f, #bd3f58);
+  border-radius: 10px;
+}
+
+.checklist input {
+  cursor: pointer;
 }
 
 .On-sale-only {
@@ -42,7 +98,7 @@
   font-weight: bold;
   border-radius: 6px;
   margin-top: 20px;
-  margin-left: 20px;
+  margin-left: 7px;
   width: 241px;
   height: 28px;
   border: #898989 1px solid;
@@ -53,4 +109,17 @@
   background-image: linear-gradient(to right, #d4183d, #170b0b);
   transition: 0.3s ease;
   cursor: pointer;
+}
+
+.main-content {
+  display: flex;
+}
+
+.game-list-browse {
+  display: flex; /* Bật Flexbox */
+  flex-wrap: wrap; /* Cho phép các mục xuống dòng */
+  gap: 10px;
+  margin-top: 28px;
+  margin-left: 426px;
+  width: 100%;
 }

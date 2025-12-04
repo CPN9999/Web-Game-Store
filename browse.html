@@ -16,19 +16,20 @@
   </head>
   <body>
     <nav>
-      <div class="nav-left">
+      <a href="index.html" class="nav-left">
         <img
           src="Asset/Icon/Logo.png"
           alt="Logo"
           style="height: 22px; width: 17px"
         />
         <span class="site-name">GameForge</span>
-      </div>
+      </button>
       <div class="nav-center">
         <div class="indicators">
-          <a href="index.html">Home</a>
+          <a href="index.html" >Home</a>
           <a href="browse.html" class="active">Browse</a>
-          <a href="">Categories</a>
+          <a href="">Wishlist</a>
+          <a href="">Library</a>
         </div>
         <div class="search-box">
           <img src="Asset/Icon/Search.png" alt="Search" class="search-icon" />
@@ -36,11 +37,13 @@
         </div>
       </div>
       <div class="nav-right">
-        <img
-          src="Asset/Icon/Shopping Cart.png"
-          alt="Cart"
-          style="height: 17px"
-        />
+        <a href="cart.html"
+          ><img
+            src="Asset/Icon/Shopping Cart.png"
+            alt="Cart"
+            style="height: 17px"
+        /></a>
+
         <img
           src="Asset/Icon/Profile Picture.png"
           alt="Profile"
@@ -49,7 +52,7 @@
       </div>
     </nav>
 
-    <div class="main-content">
+    <section class="main-content">
       <div class="filter">
         <div class="filter-label">
           <img
@@ -83,13 +86,35 @@
                 name="adventure"
                 value="Adventure"
               />
-              <label for="Adventure"> Adventure</label><br />
+              <label for="adventure"> Adventure</label><br />
+              <input type="checkbox" id="RPG" name="RPG" value="RPG" />
+              <label for="RPG"> RPG</label><br />
+              <input type="checkbox" id="action" name="action" value="Action" />
+              <label for="action"> Action</label><br />
+              <input
+                type="checkbox"
+                id="adventure"
+                name="adventure"
+                value="Adventure"
+              />
+              <label for="adventure"> Adventure</label><br />
+              <input type="checkbox" id="RPG" name="RPG" value="RPG" />
+              <label for="RPG"> RPG</label><br />
+              <input type="checkbox" id="action" name="action" value="Action" />
+              <label for="action"> Action</label><br />
+              <input
+                type="checkbox"
+                id="adventure"
+                name="adventure"
+                value="Adventure"
+              />
+              <label for="adventure"> Adventure</label><br />
               <input type="checkbox" id="RPG" name="RPG" value="RPG" />
               <label for="RPG"> RPG</label><br />
             </li>
           </div>
         </div>
-        <div style="margin-top: 117px; margin-left: 17px; font-size: 12px">
+        <div style="margin-top: 19px; margin-left: 17px; font-size: 12px">
           Price Range: $0-$100
         </div>
         <div class="On-sale-only">
@@ -99,7 +124,359 @@
         </div>
         <button>Clear All Filters</button>
       </div>
-      <div class="game-list"></div>
-    </div>
+      <div class="game-list-browse">
+        <span style="width: 100%;height: 53px;"><H2>Browse Games</H2></span>
+        
+      <div class="game-card">
+        <span class="discount-badge"><b>-50%</b></span>
+        <div class="container">
+          <span class="Overlay">View Details</span>
+          <img src="Asset/Image/Elden Rim.png" alt="Elden Rim" />
+        </div>
+        <div class="game-info">
+          <h3>Elden Rim</h3>
+          <span class="studio">FromHardware</span>
+          <div class="game-tags">
+            <span class="tag-sale"><b>ON SALE</b></span>
+            <span class="tags">Souls-like</span>
+            <span class="tags">Difficult</span>
+          </div>
+          <div class="game-rating-price">
+            <span class="rating-gameList">
+              <img src="Asset/Icon/Star.png" alt="Star" />
+              <b>4.9 </b>
+              <span style="font-size: 12px">(5,637 Reviews)</span>
+            </span>
+            <span style="display: flex; gap: 5px; align-items: center">
+              <a href="cart.html"
+                ><img
+                  src="Asset/Icon/Add to Cart.png"
+                  alt="add-cart"
+                  style="width: 20px; height: 20px; margin-right: 3px"
+              /></a>
+              <a href=""
+                ><img
+                  src="Asset/Icon/Heart.png"
+                  alt=""
+                  style="width: 20px; height: 20px; margin-right: 3px"
+              /></a>
+              <span class="price-sale"
+                ><s style="font-size: 9px; margin-right: 2px">$49.99</s
+                ><b>$24.99</b></span
+              >
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <span class="discount-badge"><b>-50%</b></span>
+        <div class="container">
+          <span class="Overlay">View Details</span>
+          <img src="Asset/Image/Elden Rim.png" alt="Elden Rim" />
+        </div>
+        <div class="game-info">
+          <h3>Elden Rim</h3>
+          <span class="studio">FromHardware</span>
+          <div class="game-tags">
+            <span class="tag-sale"><b>ON SALE</b></span>
+            <span class="tags">Souls-like</span>
+            <span class="tags">Difficult</span>
+          </div>
+          <div class="game-rating-price">
+            <span class="rating-gameList">
+              <img src="Asset/Icon/Star.png" alt="Star" />
+              <b>4.9 </b>
+              <span style="font-size: 12px">(5,637 Reviews)</span>
+            </span>
+            <span style="display: flex; gap: 5px; align-items: center">
+              <a href="cart.html"
+                ><img
+                  src="Asset/Icon/Add to Cart.png"
+                  alt="add-cart"
+                  style="width: 20px; height: 20px; margin-right: 3px"
+              /></a>
+              <a href=""
+                ><img
+                  src="Asset/Icon/Heart.png"
+                  alt=""
+                  style="width: 20px; height: 20px; margin-right: 3px"
+              /></a>
+              <span class="price-sale"
+                ><s style="font-size: 9px; margin-right: 2px">$49.99</s
+                ><b>$24.99</b></span
+              >
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <span class="discount-badge"><b>-50%</b></span>
+        <div class="container">
+          <span class="Overlay">View Details</span>
+          <img src="Asset/Image/Elden Rim.png" alt="Elden Rim" />
+        </div>
+        <div class="game-info">
+          <h3>Elden Rim</h3>
+          <span class="studio">FromHardware</span>
+          <div class="game-tags">
+            <span class="tag-sale"><b>ON SALE</b></span>
+            <span class="tags">Souls-like</span>
+            <span class="tags">Difficult</span>
+          </div>
+          <div class="game-rating-price">
+            <span class="rating-gameList">
+              <img src="Asset/Icon/Star.png" alt="Star" />
+              <b>4.9 </b>
+              <span style="font-size: 12px">(5,637 Reviews)</span>
+            </span>
+            <span style="display: flex; gap: 5px; align-items: center">
+              <a href="cart.html"
+                ><img
+                  src="Asset/Icon/Add to Cart.png"
+                  alt="add-cart"
+                  style="width: 20px; height: 20px; margin-right: 3px"
+              /></a>
+              <a href=""
+                ><img
+                  src="Asset/Icon/Heart.png"
+                  alt=""
+                  style="width: 20px; height: 20px; margin-right: 3px"
+              /></a>
+              <span class="price-sale"
+                ><s style="font-size: 9px; margin-right: 2px">$49.99</s
+                ><b>$24.99</b></span
+              >
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <span class="discount-badge"><b>-50%</b></span>
+        <div class="container">
+          <span class="Overlay">View Details</span>
+          <img src="Asset/Image/Elden Rim.png" alt="Elden Rim" />
+        </div>
+        <div class="game-info">
+          <h3>Elden Rim</h3>
+          <span class="studio">FromHardware</span>
+          <div class="game-tags">
+            <span class="tag-sale"><b>ON SALE</b></span>
+            <span class="tags">Souls-like</span>
+            <span class="tags">Difficult</span>
+          </div>
+          <div class="game-rating-price">
+            <span class="rating-gameList">
+              <img src="Asset/Icon/Star.png" alt="Star" />
+              <b>4.9 </b>
+              <span style="font-size: 12px">(5,637 Reviews)</span>
+            </span>
+            <span style="display: flex; gap: 5px; align-items: center">
+              <a href="cart.html"
+                ><img
+                  src="Asset/Icon/Add to Cart.png"
+                  alt="add-cart"
+                  style="width: 20px; height: 20px; margin-right: 3px"
+              /></a>
+              <a href=""
+                ><img
+                  src="Asset/Icon/Heart.png"
+                  alt=""
+                  style="width: 20px; height: 20px; margin-right: 3px"
+              /></a>
+              <span class="price-sale"
+                ><s style="font-size: 9px; margin-right: 2px">$49.99</s
+                ><b>$24.99</b></span
+              >
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <span class="discount-badge"><b>-50%</b></span>
+        <div class="container">
+          <span class="Overlay">View Details</span>
+          <img src="Asset/Image/Elden Rim.png" alt="Elden Rim" />
+        </div>
+        <div class="game-info">
+          <h3>Elden Rim</h3>
+          <span class="studio">FromHardware</span>
+          <div class="game-tags">
+            <span class="tag-sale"><b>ON SALE</b></span>
+            <span class="tags">Souls-like</span>
+            <span class="tags">Difficult</span>
+          </div>
+          <div class="game-rating-price">
+            <span class="rating-gameList">
+              <img src="Asset/Icon/Star.png" alt="Star" />
+              <b>4.9 </b>
+              <span style="font-size: 12px">(5,637 Reviews)</span>
+            </span>
+            <span style="display: flex; gap: 5px; align-items: center">
+              <a href="cart.html"
+                ><img
+                  src="Asset/Icon/Add to Cart.png"
+                  alt="add-cart"
+                  style="width: 20px; height: 20px; margin-right: 3px"
+              /></a>
+              <a href=""
+                ><img
+                  src="Asset/Icon/Heart.png"
+                  alt=""
+                  style="width: 20px; height: 20px; margin-right: 3px"
+              /></a>
+              <span class="price-sale"
+                ><s style="font-size: 9px; margin-right: 2px">$49.99</s
+                ><b>$24.99</b></span
+              >
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <span class="discount-badge"><b>-50%</b></span>
+        <div class="container">
+          <span class="Overlay">View Details</span>
+          <img src="Asset/Image/Elden Rim.png" alt="Elden Rim" />
+        </div>
+        <div class="game-info">
+          <h3>Elden Rim</h3>
+          <span class="studio">FromHardware</span>
+          <div class="game-tags">
+            <span class="tag-sale"><b>ON SALE</b></span>
+            <span class="tags">Souls-like</span>
+            <span class="tags">Difficult</span>
+          </div>
+          <div class="game-rating-price">
+            <span class="rating-gameList">
+              <img src="Asset/Icon/Star.png" alt="Star" />
+              <b>4.9 </b>
+              <span style="font-size: 12px">(5,637 Reviews)</span>
+            </span>
+            <span style="display: flex; gap: 5px; align-items: center">
+              <a href="cart.html"
+                ><img
+                  src="Asset/Icon/Add to Cart.png"
+                  alt="add-cart"
+                  style="width: 20px; height: 20px; margin-right: 3px"
+              /></a>
+              <a href=""
+                ><img
+                  src="Asset/Icon/Heart.png"
+                  alt=""
+                  style="width: 20px; height: 20px; margin-right: 3px"
+              /></a>
+              <span class="price-sale"
+                ><s style="font-size: 9px; margin-right: 2px">$49.99</s
+                ><b>$24.99</b></span
+              >
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <span class="discount-badge"><b>-50%</b></span>
+        <div class="container">
+          <span class="Overlay">View Details</span>
+          <img src="Asset/Image/Elden Rim.png" alt="Elden Rim" />
+        </div>
+        <div class="game-info">
+          <h3>Elden Rim</h3>
+          <span class="studio">FromHardware</span>
+          <div class="game-tags">
+            <span class="tag-sale"><b>ON SALE</b></span>
+            <span class="tags">Souls-like</span>
+            <span class="tags">Difficult</span>
+          </div>
+          <div class="game-rating-price">
+            <span class="rating-gameList">
+              <img src="Asset/Icon/Star.png" alt="Star" />
+              <b>4.9 </b>
+              <span style="font-size: 12px">(5,637 Reviews)</span>
+            </span>
+            <span style="display: flex; gap: 5px; align-items: center">
+              <a href="cart.html"
+                ><img
+                  src="Asset/Icon/Add to Cart.png"
+                  alt="add-cart"
+                  style="width: 20px; height: 20px; margin-right: 3px"
+              /></a>
+              <a href=""
+                ><img
+                  src="Asset/Icon/Heart.png"
+                  alt=""
+                  style="width: 20px; height: 20px; margin-right: 3px"
+              /></a>
+              <span class="price-sale"
+                ><s style="font-size: 9px; margin-right: 2px">$49.99</s
+                ><b>$24.99</b></span
+              >
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <span class="discount-badge"><b>-50%</b></span>
+        <div class="container">
+          <span class="Overlay">View Details</span>
+          <img src="Asset/Image/Elden Rim.png" alt="Elden Rim" />
+        </div>
+        <div class="game-info">
+          <h3>Elden Rim</h3>
+          <span class="studio">FromHardware</span>
+          <div class="game-tags">
+            <span class="tag-sale"><b>ON SALE</b></span>
+            <span class="tags">Souls-like</span>
+            <span class="tags">Difficult</span>
+          </div>
+          <div class="game-rating-price">
+            <span class="rating-gameList">
+              <img src="Asset/Icon/Star.png" alt="Star" />
+              <b>4.9 </b>
+              <span style="font-size: 12px">(5,637 Reviews)</span>
+            </span>
+            <span style="display: flex; gap: 5px; align-items: center">
+              <a href="cart.html"
+                ><img
+                  src="Asset/Icon/Add to Cart.png"
+                  alt="add-cart"
+                  style="width: 20px; height: 20px; margin-right: 3px"
+              /></a>
+              <a href=""
+                ><img
+                  src="Asset/Icon/Heart.png"
+                  alt=""
+                  style="width: 20px; height: 20px; margin-right: 3px"
+              /></a>
+              <span class="price-sale"
+                ><s style="font-size: 9px; margin-right: 2px">$49.99</s
+                ><b>$24.99</b></span
+              >
+            </span>
+          </div>
+        </div>
+      </div>
+
+     
+      </div>
+
+    </section>
+    
   </body>
+  <footer>
+    <div class="footer-web">
+      <img
+        src="Asset/Icon/Logo.png"
+        alt="Logo"
+        style="height: 22px; width: 17px"
+      />
+      <span class="site-name">GameForge</span>
+    </div>
+  </footer>
 </html>
