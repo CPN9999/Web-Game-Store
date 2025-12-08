@@ -8,7 +8,7 @@ body {
   color: #ffffff;
 }
 
-nav {
+header {
   position: sticky;
   top: 0px;
   align-items: center;
@@ -21,7 +21,7 @@ nav {
   z-index: 100;
 }
 
-nav a {
+header a {
   text-decoration: none;
   color: #b7b7b7;
   font-size: 11px;

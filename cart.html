@@ -3,7 +3,134 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/cart.css" />
+    <title>GameForge</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,700;1,400;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <a href="index.html" class="nav-left">
+        <img
+          src="Asset/Icon/Logo.png"
+          alt="Logo"
+          style="height: 22px; width: 17px"
+        />
+        <span class="site-name">GameForge</span>
+      </a>
+      <div class="nav-center">
+        <div class="indicators">
+          <a href="index.html">Home</a>
+          <a href="browse.html">Browse</a>
+          <a href="">Wishlist</a>
+          <a href="">Library</a>
+        </div>
+        <div class="search-box">
+          <img src="Asset/Icon/Search.png" alt="Search" class="search-icon" />
+          <input type="text" placeholder="Search for games..." />
+        </div>
+      </div>
+      <div class="nav-right">
+        <a href="cart.html"
+          ><img
+            class="active"
+            src="Asset/Icon/Shopping Cart.png"
+            alt="Cart"
+            style="height: 17px"
+        /></a>
+
+        <img
+          src="Asset/Icon/Profile Picture.png"
+          alt="Profile"
+          style="height: 29px; border-radius: 50%; margin-top: -8px"
+        />
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <b
+        ><a href="index.html" style="text-decoration: none; color: black"
+          >Home</a
+        ></b
+      >
+      > My Shopping Cart
+    </div>
+
+    <h1 class="page-title">My Shopping Cart</h1>
+
+    <div class="main-content-cart">
+      <span
+        ><img src="Asset/Image/Katana-Runner.jpg" alt="Katana-Runner"
+      /></span>
+      <span>
+        <div class="game-info-cart">
+          <h3 style="margin-top: 0px; font-size: 25px; margin-bottom: -1px">
+            Elden Rim
+          </h3>
+          <span class="studio-cart">FromHardware</span>
+          <div class="game-rating-price-cart">
+            <span class="rating-gameList">
+              <img
+                src="Asset/Icon/Star.png"
+                alt="Star"
+                style="width: 16px; height: 16px"
+              />
+              <b>4.9 </b>
+              <span style="font-size: 12px">(5,637 Reviews)</span>
+            </span>
+          </div>
+          <div class="game-tags">
+            <span class="tag-featured"><b>Featured</b></span>
+            <span class="tags">Souls-like</span>
+            <span class="tags">Difficult</span>
+          </div>
+          <div class="options">
+            <button
+              style="
+                background-image: linear-gradient(to right, #d4183d, #6e0c20);
+                color: white;
+                font-size: 23px;
+                font-family: 'Montserrat';
+              "
+            >
+              <b>Purchase for 14.99$</b>
+            </button>
+            <button
+              style="
+                margin-top: 10px;
+                background-color: white;
+                font-size: 20px;
+                border: #717182 1px solid;
+                font-family: 'Montserrat';
+              "
+            >
+              Remove
+            </button>
+          </div>
+        </div></span
+      >
+      <span class="estimate">
+        <div style="margin-top: 23px"><b>Estimated Total</b></div>
+        <div style="margin-top: 13px; font-size: 50px"><b>0$</b></div>
+        <div>-------------</div>
+      </span>
+    </div>
+  </body>
+
+  <footer>
+    <div class="footer-web">
+      <img
+        src="Asset/Icon/Logo.png"
+        alt="Logo"
+        style="height: 22px; width: 17px"
+      />
+      <span class="site-name">GameForge</span>
+    </div>
+  </footer>
 </html>
