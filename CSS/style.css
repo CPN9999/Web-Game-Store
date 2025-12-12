@@ -438,3 +438,19 @@ header a {
 .price-sale:hover s {
   color: black;
 }
+
+.return-home {
+  background-image: linear-gradient(to right, #cc173b, #6e0c20);
+  color: white;
+  padding-top: 5px;
+  padding-left: 8px;
+  padding-right: 7px;
+  padding-bottom: 5px;
+  border-radius: 6px;
+  height: auto;
+  width: auto;
+  font-size: 20px;
+  display: flex;
+  border: black 1px solid;
+  font-family: Montserrat;
+}

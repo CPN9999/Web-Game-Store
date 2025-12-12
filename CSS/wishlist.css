@@ -1,0 +1,46 @@
+.labeled {
+  display: flex;
+  margin-top: 25px;
+  margin-left: 134px;
+  align-items: center;
+  font-size: 23px;
+  gap: 20px;
+  font-weight: 600;
+}
+
+.Wishlist {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  margin-left: 135px;
+  margin-right: 135px;
+  min-height: 448px;
+  gap: 20px;
+}
+
+.Wishlist .game-card {
+  position: relative;
+  border: #898989 1px solid;
+  border-radius: 18px;
+  width: 283px;
+  height: 245px;
+  padding-bottom: 10px;
+}
+
+.Wishlist .game-rating-price {
+  margin-top: 20px;
+  position: absolute;
+  bottom: 4px;
+  width: 91%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Empty {
+  margin-top: 64px;
+  min-height: 448px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
