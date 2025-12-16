@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - GameForge</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="CSS/style.css"> 
+    <link rel="stylesheet" href="CSS/profile.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="nav-left">
+                <img src="Asset/Icon/Logo.png" alt="Logo" style="height: 22px; width: 17px">
+                <span class="brand-name">GameForge</span>
+            </a>
+            
+            <div class="nav-center">
+                <nav class="main-nav">
+                    <a href="index.html">Home</a>
+                    <a href="browse.html">Browse</a>
+                    <a href="wishlist.html">Wishlist</a>
+                    <a href="#" class="active">Library</a>
+                </nav>
+
+                <div class="search-box">
+                    <img src="Asset/Icon/Search.png" alt="Search" class="search-icon">
+                    <input type="text" placeholder="Search for games...">
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <a href="cart.html">
+                    <img src="Asset/Icon/Shopping Cart.png" alt="Cart" style="height: 17px">
+                </a>
+                <a href="profile.html">
+                    <img src="Asset/Icon/Profile Picture.png" alt="Profile" style="height: 29px; border-radius: 50%;">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="profile-container">
+        
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> <span>> My Profile</span>
+        </div>
+
+        <section class="profile-header card">
+            <div class="profile-info">
+                <div class="avatar-large">
+                    <img src="Asset/Icon/Profile Picture.png" alt="Ptitmaidinh">
+                </div>
+                <div class="user-details">
+                    <h1>Ptitmaidinh</h1>
+                    <p class="handle">@Ptit1234</p>
+                    <p class="bio">Indie game developer and enthusiast. Love discovering new games!</p>
+                    <div class="joined-date">
+                        <i class="fa-regular fa-calendar"></i> Joined December 2023
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="profile-nav">
+            <button class="nav-btn active" onclick="switchTab(event, 'overview')">Overview</button>
+            <button class="nav-btn" onclick="switchTab(event, 'account')">Account</button>
+            <button class="nav-btn" onclick="switchTab(event, 'privacy')">Privacy</button>
+            <button class="nav-btn" onclick="switchTab(event, 'notifications')">Notifications</button>
+        </div>
+
+        <div id="overview" class="tab-content">
+            <div class="placeholder-grid">
+                <div class="card empty-box"></div>
+                <div class="card empty-box"></div>
+                <div class="card empty-box"></div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="card recent-activity">
+                    <h3>Recent Activity</h3>
+                    <p class="subtitle">Your gaming activity this week</p>
+
+                    <div class="stat-row progress-section">
+                        <div class="stat-label">
+                            <span>Hour played</span>
+                            <span class="highlight">25.5h</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 60%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="stat-row">
+                        <span>Games played</span>
+                        <span class="value">5 games</span>
+                    </div>
+                    <div class="stat-row">
+                        <span>Achievements unlocked</span>
+                        <span class="tag">12 new</span>
+                    </div>
+                    <div class="stat-row">
+                        <span>Reviews posted</span>
+                        <span class="value">2 total</span>
+                    </div>
+                </div>
+
+                <div class="card quick-stats">
+                    <h3>Quick Stats</h3>
+                    <p class="subtitle">Your gaming profile at a glance</p>
+
+                    <div class="stat-group">
+                        <div class="stat-item">
+                            <span class="label">Favorite Genre</span>
+                            <span class="value-bold">Action</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="label">Most Played</span>
+                            <span class="value-bold">Cyberpunk2077</span>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="stat-row">
+                        <span>Account created</span>
+                        <span class="value">Dec 2023</span>
+                    </div>
+                    <div class="stat-row">
+                        <span>Total purchases</span>
+                        <span class="tag">$60</span>
+                    </div>
+                    <div class="stat-row">
+                        <span>Profile views</span>
+                        <span class="value">1,234 views</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="account" class="tab-content" style="display: none;">
+            <section class="card account-settings">
+                <div class="account-header">
+                    <h3>Account Information</h3>
+                    <p class="subtitle">Update your account details and email preferences</p>
+                </div>
+                
+                <div class="divider"></div>
+
+                <form action="#" class="account-form">
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" value="Ptit1234" class="form-input readonly" readonly>
+                        <span class="helper-text">Username cannot be changed</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Display Name</label>
+                        <input type="text" value="Ptitmaidinh" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gmail</label>
+                        <input type="email" value="NT.Minhptit1234@gmail.com" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Change Password</label>
+                        <button type="button" class="btn-password">
+                            <i class="fa-solid fa-lock"></i> Update Password
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <div id="privacy" class="tab-content" style="display: none;">
+            <section class="card privacy-settings">
+                <div class="account-header">
+                    <h3>Privacy Settings</h3>
+                    <p class="subtitle">Control who can see your information</p>
+                </div>
+                
+                <div class="divider"></div>
+
+                <div class="notification-list">
+                    <div class="notification-item">
+                        <div class="notif-text">
+                            <span class="notif-title">Profile Visibility</span>
+                            <span class="notif-desc">Manage who can see your profile details</span>
+                        </div>
+                        <input type="checkbox" class="styled-checkbox" checked>
+                    </div>
+
+                    <div class="divider-light"></div>
+
+                    <div class="notification-item">
+                        <div class="notif-text">
+                            <span class="notif-title">Show Game Library</span>
+                            <span class="notif-desc">Let others see your game collection</span>
+                        </div>
+                        <input type="checkbox" class="styled-checkbox" checked>
+                    </div>
+
+                    <div class="divider-light"></div>
+
+                    <div class="notification-item">
+                        <div class="notif-text">
+                            <span class="notif-title">Show Wishlist</span>
+                            <span class="notif-desc">Display your wishlist to friends</span>
+                        </div>
+                        <input type="checkbox" class="styled-checkbox" checked>
+                    </div>
+
+                    <div class="divider-light"></div>
+
+                    <div class="notification-item">
+                        <div class="notif-text">
+                            <span class="notif-title">Activity Status</span>
+                            <span class="notif-desc">Show when you're online</span>
+                        </div>
+                        <input type="checkbox" class="styled-checkbox">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="notifications" class="tab-content" style="display: none;">
+            <section class="card notification-settings">
+                <div class="account-header">
+                    <h3>Notification Preferences</h3>
+                    <p class="subtitle">Choose what notifications you want to receive</p>
+                </div>
+                
+                <div class="divider"></div>
+
+                <div class="notification-list">
+                    <h4 class="notif-category">Email Notifications</h4>
+                    
+                    <div class="notification-item">
+                        <div class="notif-text">
+                            <span class="notif-title">Game Update</span>
+                            <span class="notif-desc">Receive updates via email regarding games you own</span>
+                        </div>
+                        <input type="checkbox" class="styled-checkbox" checked>
+                    </div>
+
+                    <div class="divider-light"></div>
+
+                    <div class="notification-item">
+                        <div class="notif-text">
+                            <span class="notif-title">Wishlist Discounts</span>
+                            <span class="notif-desc">Alert when wishlisted games go on sale</span>
+                        </div>
+                        <input type="checkbox" class="styled-checkbox" checked>
+                    </div>
+
+                    <div class="divider-light"></div>
+
+                    <div class="notification-item">
+                        <div class="notif-text">
+                            <span class="notif-title">New Releases</span>
+                            <span class="notif-desc">Get notified about new game releases</span>
+                        </div>
+                        <input type="checkbox" class="styled-checkbox">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-web" style="display: flex; justify-content: center; align-items: center; gap: 10px; padding: 20px 0;">
+            <img src="Asset/Icon/Logo.png" alt="Logo" style="height: 22px; width: 17px">
+            <span class="site-name" style="font-weight: 700; font-size: 16px; color: white;">GameForge</span>
+        </div>
+        <div style="text-align: center; color: white; padding-bottom: 20px; font-size: 14px;">
+            Discover amazing games, support developers,<br>and connect with fellow gamers.
+        </div>
+    </footer>
+
+    <script>
+        function switchTab(event, tabName) {
+            // Ẩn tất cả nội dung tab
+            var tabcontent = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Bỏ active ở tất cả nút
+            var tablinks = document.getElementsByClassName("nav-btn");
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+
+            // Hiện tab được chọn và active nút đó
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.classList.add("active");
+        }
+    </script>
+
+</body>
+</html>
