@@ -45,11 +45,13 @@
             style="height: 17px"
         /></a>
 
-        <img
-          src="Asset/Icon/Profile Picture.png"
-          alt="Profile"
-          style="height: 29px; border-radius: 50%; margin-top: -8px"
-        />
+        <a href="profile.html">
+          <img
+            src="Asset/Icon/Profile Picture.png"
+            alt="Profile"
+            style="height: 29px; border-radius: 50%; margin-top: -8px"
+          />
+        </a>
       </div>
     </header>
 
@@ -91,16 +93,20 @@
             <span class="tags">Difficult</span>
           </div>
           <div class="options">
+            
             <button
+              onclick="window.location.href='payment.html'"
               style="
                 background-image: linear-gradient(to right, #d4183d, #6e0c20);
                 color: white;
                 font-size: 23px;
                 font-family: 'Montserrat';
+                cursor: pointer;
               "
             >
               <b>Purchase for 14.99$</b>
             </button>
+
             <button
               style="
                 margin-top: 10px;
@@ -108,6 +114,7 @@
                 font-size: 20px;
                 border: #717182 1px solid;
                 font-family: 'Montserrat';
+                cursor: pointer;
               "
             >
               Remove

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - GameForge</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,700;1,400;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="CSS/style.css"> 
+    <link rel="stylesheet" href="CSS/payment.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+      <a href="index.html" class="nav-left">
+        <img src="Asset/Icon/Logo.png" alt="Logo" style="height: 22px; width: 17px"/>
+        <span class="site-name">GameForge</span>
+      </a>
+      
+      <div class="nav-center">
+        <div class="indicators">
+          <a href="index.html">Home</a>
+          <a href="browse.html">Browse</a>
+          <a href="wishlist.html">Wishlist</a>
+          <a href="">Library</a>
+        </div>
+        <div class="search-box">
+          <img src="Asset/Icon/Search.png" alt="Search" class="search-icon" />
+          <input type="text" placeholder="Search for games..." />
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <a href="cart.html">
+            <img src="Asset/Icon/Shopping Cart.png" alt="Cart" style="height: 17px"/>
+        </a>
+        <a href="profile.html">
+          <img src="Asset/Icon/Profile Picture.png" alt="Profile" style="height: 29px; border-radius: 50%; margin-top: -8px"/>
+        </a>
+      </div>
+    </header>
+
+    <main class="container payment-container">
+        
+        <div id="pageHeaderGroup">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> 
+                <span>></span> 
+                <a href="cart.html">My Shopping Cart</a> 
+                <span>> Payment</span>
+            </div>
+            <h1 class="page-title">Payment</h1>
+        </div>
+
+        <div class="payment-wrapper" id="paymentWrapper">
+            
+            <div class="card payment-card">
+                <div class="total-section">
+                    <span class="label-text">Estimated Total</span>
+                    <span class="price-large">14.99$</span>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="contents-section">
+                    <h3 class="label-text text-center mb-15">Contents</h3>
+                    
+                    <div class="item-header">
+                        <span>Item</span>
+                        <span>Price</span>
+                    </div>
+
+                    <div class="item-details">
+                        <span class="game-name">Katana Runner 2049</span>
+                        <span class="game-price">14.99$</span>
+                    </div>
+
+                    <div class="item-image">
+                        <img src="Asset/Image/Katana-Runner.jpg" alt="Game Cover">
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="action-buttons">
+                    <button class="btn-confirm" id="btnConfirm" onclick="showQRCode()">Confirm Purchase</button>
+                    
+                    <button class="btn-status-check" id="btnCheck" style="display: none;">
+                        <i class="fa-solid fa-check"></i>
+                    </button>
+
+                    <button class="btn-cancel" onclick="history.back()">Cancel</button>
+                </div>
+            </div>
+
+            <div class="qr-section" id="qrSection" style="display: none;">
+                <div class="qr-image-box">
+                    <img src="Asset/Image/QR.jpg" alt="Scan QR Code">
+                </div>
+                <p class="qr-instruction">Scan our QR to complete your transaction.</p>
+                
+                <button class="btn-check-transaction" onclick="showSuccess()">
+                    Check Transaction
+                </button>
+            </div>
+
+        </div>
+
+        <div class="success-section" id="successSection" style="display: none;">
+            <div class="success-icon-wrapper">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h2 class="success-title">Transaction successful!</h2>
+            <p class="success-subtitle">Thank you for using GameForge. Enjoy your new game!</p>
+            
+            <div class="success-actions">
+                <a href="index.html" class="btn-return-home">Return Home</a>
+                <a href="profile.html" class="btn-view-library">View in Library</a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-web">
+            <img src="Asset/Icon/Logo.png" alt="Logo" style="height: 22px; width: 17px">
+            <span class="site-name">GameForge</span>
+        </div>
+    </footer>
+
+    <script>
+        function showQRCode() {
+            const wrapper = document.getElementById('paymentWrapper');
+            const qrSection = document.getElementById('qrSection');
+            const btnConfirm = document.getElementById('btnConfirm');
+            const btnCheck = document.getElementById('btnCheck');
+
+            wrapper.classList.add('show-qr-layout');
+            qrSection.style.display = 'flex';
+            btnConfirm.style.display = 'none';
+            btnCheck.style.display = 'flex';
+        }
+
+        function showSuccess() {
+            // Ẩn toàn bộ phần Payment/QR và Breadcrumb
+            document.getElementById('paymentWrapper').style.display = 'none';
+            document.getElementById('pageHeaderGroup').style.display = 'none';
+            
+            // Hiện phần Success
+            document.getElementById('successSection').style.display = 'flex';
+        }
+    </script>
+
+</body>
+</html>
