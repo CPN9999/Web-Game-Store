@@ -1,105 +1,78 @@
-/* Container chính căn lề theo Header */
+/* Layout chính chia làm 2 cột */
 .library-container {
-    padding: 40px 8.5%;
+    display: flex; /* Chia cột sidebar và display */
+    padding: 40px 0 0 8.5%; /* Bỏ padding phải để ảnh tràn lề */
     background-color: white;
-    min-height: 80vh;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
-/* Tiêu đề "My Library" có icon vàng */
-.library-title-group {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 30px;
+.library-sidebar {
+    width: 350px;
+    z-index: 10; /* Để nằm trên lớp gradient của ảnh */
 }
 
-.yellow-box {
-    width: 24px;
-    height: 24px;
-    background-color: #FDC700;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
+/* Card đang được chọn - Hiệu ứng bóng đỏ đặc trưng từ Figma */
+.library-card.selected {
+    box-shadow: -7px 7px 13px 3px #FF375F; /* Đổ bóng màu đỏ */
+    transform: translateX(10px);
+    z-index: 11;
 }
 
-.library-title-group h1 {
-    font-size: 24px;
-    font-weight: 700;
-    color: #000;
-    margin: 0;
+/* Card không được chọn - Làm mờ đi một chút giống ảnh */
+.library-card.inactive {
+    filter: brightness(0.6);
+    margin-left: -75px; /* Đẩy lùi sang trái giống Figma */
+    transition: 0.3s ease;
 }
 
-/* Danh sách Card xếp dọc bên trái */
-.library-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 350px; /* Độ rộng card giống ảnh mẫu */
+.library-card.inactive:hover {
+    filter: brightness(1);
+    margin-left: 0;
 }
 
-.library-card {
+/* Phần hiển thị ảnh lớn bên phải */
+.game-display {
+    flex: 1;
+    position: relative;
+    margin-left: 20px;
+}
+
+.display-wrapper {
     position: relative;
     width: 100%;
-    height: 110px;
-    border-radius: 6px;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    height: 595px;
 }
 
-.library-card img {
+.main-display-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    box-shadow: 0px -123px 139px rgba(0, 0, 0, 0.75) inset; /* Bóng tối phía dưới ảnh */
 }
 
-/* Hiệu ứng gradient tối để hiện chữ trắng */
-.card-content {
+/* Chữ tiêu đề cực lớn trên ảnh */
+.display-overlay {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 12px;
-}
-
-.game-title {
-    color: white;
-    font-size: 18px;
-    font-weight: 700;
+    bottom: 50px;
+    right: 50px;
     text-align: right;
-    margin: 0;
-    text-shadow: 0px 2px 4px rgba(0,0,0,0.5);
 }
 
-/* Label "new" màu vàng */
-.new-tag {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-bottom: 5px;
-}
-
-.new-tag .dot {
-    width: 6px;
-    height: 6px;
-    background-color: #FDC700;
-}
-
-.new-tag .text {
-    color: #FDC700;
-    font-size: 12px;
+.display-title {
+    color: white;
+    font-size: 65px;
     font-weight: 700;
-    text-transform: uppercase;
+    text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+    margin: 0;
 }
 
-/* Hiệu ứng hover cho card */
-.library-card:hover {
-    transform: translateX(5px);
-    transition: 0.3s ease;
+/* Lớp phủ trắng bên trái để làm mượt phần chuyển giao giữa sidebar và ảnh */
+.side-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, white 100%);
 }
