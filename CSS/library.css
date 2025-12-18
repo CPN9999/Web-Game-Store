@@ -1,78 +1,133 @@
-/* Layout chính chia làm 2 cột */
-.library-container {
-    display: flex; /* Chia cột sidebar và display */
-    padding: 40px 0 0 8.5%; /* Bỏ padding phải để ảnh tràn lề */
+/* Bố cục chính */
+.library-main {
+    display: flex;
     background-color: white;
-    min-height: 100vh;
+    min-height: calc(100vh - 112px);
     overflow: hidden;
 }
 
-.library-sidebar {
-    width: 350px;
-    z-index: 10; /* Để nằm trên lớp gradient của ảnh */
+/* Sidebar bên trái */
+.sidebar {
+    width: 380px;
+    padding-left: 8.5%;
+    padding-top: 30px;
+    z-index: 10;
+    background-color: white;
 }
 
-/* Card đang được chọn - Hiệu ứng bóng đỏ đặc trưng từ Figma */
-.library-card.selected {
-    box-shadow: -7px 7px 13px 3px #FF375F; /* Đổ bóng màu đỏ */
-    transform: translateX(10px);
-    z-index: 11;
+.library-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
 }
 
-/* Card không được chọn - Làm mờ đi một chút giống ảnh */
-.library-card.inactive {
-    filter: brightness(0.6);
-    margin-left: -75px; /* Đẩy lùi sang trái giống Figma */
-    transition: 0.3s ease;
+.yellow-diamond {
+    width: 18px;
+    height: 18px;
+    background-color: #fdc700;
+    transform: rotate(45deg);
 }
 
-.library-card.inactive:hover {
-    filter: brightness(1);
-    margin-left: 0;
-}
-
-/* Phần hiển thị ảnh lớn bên phải */
-.game-display {
-    flex: 1;
-    position: relative;
-    margin-left: 20px;
-}
-
-.display-wrapper {
-    position: relative;
-    width: 100%;
-    height: 595px;
-}
-
-.main-display-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    box-shadow: 0px -123px 139px rgba(0, 0, 0, 0.75) inset; /* Bóng tối phía dưới ảnh */
-}
-
-/* Chữ tiêu đề cực lớn trên ảnh */
-.display-overlay {
-    position: absolute;
-    bottom: 50px;
-    right: 50px;
-    text-align: right;
-}
-
-.display-title {
-    color: white;
-    font-size: 65px;
+.library-header h1 {
+    font-size: 26px;
     font-weight: 700;
-    text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
     margin: 0;
 }
 
-/* Lớp phủ trắng bên trái để làm mượt phần chuyển giao giữa sidebar và ảnh */
-.side-gradient {
+.game-list-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Định dạng Card game */
+.lib-card {
+    position: relative;
+    width: 320px;
+    height: 105px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.lib-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+/* Hiệu ứng bóng đỏ khi Card được click (Active) */
+.lib-card.active {
+    box-shadow: -7px 7px 13px 3px #ff375f !important;
+    transform: translateX(10px);
+}
+
+.lib-card.active img {
+    filter: brightness(1);
+}
+
+.card-title {
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.8);
+}
+
+/* Vùng hiển thị bên phải */
+.display-area {
+    flex: 1;
+    position: relative;
+}
+
+/* Lệnh ẩn mặc định cho vùng hiển thị */
+.display-area.hidden {
+    display: none;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#main-bg {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+/* Các lớp hiệu ứng Gradient */
+.white-gradient-left {
     position: absolute;
     top: 0;
     left: 0;
     width: 150px;
     height: 100%;
-    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, white 100%);
+    background: linear-gradient(to right, white, transparent);
+}
+
+.black-gradient-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+#main-title {
+    position: absolute;
+    bottom: 40px;
+    right: 5%;
+    color: white;
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0px 4px 10px rgba(0,0,0,0.5);
 }
